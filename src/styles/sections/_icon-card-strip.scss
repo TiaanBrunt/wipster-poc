@@ -1,0 +1,16 @@
+.c-icon-card-strip{
+  &__card-container{
+    grid-column: 2 / 14;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    &__card{
+      grid-column: span 4;
+      @media screen and (min-width: 576px) {
+        grid-column: span 1;
+        padding: 0 15px;
+      }
+    }
+  }
+  
+  
+}

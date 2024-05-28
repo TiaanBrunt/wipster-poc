@@ -1,0 +1,40 @@
+@use "./generic/rich-text-block";
+@use "./generic/link";
+
+@use "./simple/card--vertical-icon-text.scss";
+
+@use "./sections/left-right-block--image";
+@use "./sections/centered-block";
+@use "./sections/icon-card-strip";
+@use "./sections/card-grid--logo-text";
+
+@use "./reset";
+@use "./variables";
+
+
+
+.background--slate{
+  background-color: var(--bg-slate);
+  color: #fff;
+}
+
+.background--zinc{
+  background-color: var(--bg-zinc);
+  color: #222;
+}
+
+body{
+  font-family: canada-type-gibson,sans-serif;
+  color: #222;
+  font-size: 18px;
+}
+
+.container{
+  grid-template-columns: var(--twelve-column-grid);
+  display: grid;
+  padding: 40px 0;
+  // max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+
+}
