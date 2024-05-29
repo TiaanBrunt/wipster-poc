@@ -17,6 +17,9 @@ export default function RootLayout({
   return (
     
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="https://www.wipster.io/hubfs/favicon-1.png"/>
+      </head>
       <body>{children}</body>
     </html>
   );
