@@ -19,10 +19,9 @@ const IconCardStrip = (block:BlockProps) => {
       <div className={`${c}__card-container`}>
         {block.cards?.map((card, i) =>{
           return(
-            <div className={`${c}__card-container__card`}>
+            <div className={`${c}__card-container__card`} key={i}>
               <CardVerticalIconText {...card} />
             </div>
-    
           )
         })}
       </div>

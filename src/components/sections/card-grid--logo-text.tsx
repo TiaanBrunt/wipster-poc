@@ -24,9 +24,6 @@ interface BlockProps{
   background_color: "white" | "zinc" | "slate"
 }
 
-
-
-
 const CardGridLogoText = (block:BlockProps) => {
   const c = "c-card-grid--logo-text";
   return (
@@ -35,7 +32,7 @@ const CardGridLogoText = (block:BlockProps) => {
 
         {block.cards?.map((card, i) =>{
           return(
-            <CardHorizontalLogoText {...card} />
+            <CardHorizontalLogoText {...card} key={i}/>
           )
         })}
 

@@ -18,11 +18,24 @@
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);
 
+  &:hover{
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
   &--green {
     background-color: #00c65e;
+    &:hover{
+      background-color: #07a450;
+    }
   }
 
   &--blue{
     background-color: #0057b8;
+    &:hover{
+      background-color: rgba(79, 139, 242,1.0);
+    }
   }
 }

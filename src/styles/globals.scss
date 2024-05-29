@@ -2,16 +2,23 @@
 @use "./generic/link";
 
 @use "./simple/card--vertical-icon-text.scss";
+@use "./simple/card--horizontal-logo-text.scss";
 
 @use "./sections/left-right-block--image";
 @use "./sections/centered-block";
 @use "./sections/icon-card-strip";
 @use "./sections/card-grid--logo-text";
+@use "./sections/hero";
+
+@use "./layouts/nav";
 
 @use "./reset";
 @use "./variables";
 
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .background--slate{
   background-color: var(--bg-slate);
@@ -24,9 +31,11 @@
 }
 
 body{
-  font-family: canada-type-gibson,sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: #222;
   font-size: 18px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container{
