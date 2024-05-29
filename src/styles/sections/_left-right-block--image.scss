@@ -9,6 +9,19 @@
             margin-bottom: 8px;
         }
 
+        &__eyebrow-image{
+
+            &__image{
+                width: 139px;
+            }
+        }
+
+        &__bottom-image{
+            &__image{
+                width: 104px
+            }
+        }
+
         &__heading{
             font-size: 40px;
             font-style: normal;

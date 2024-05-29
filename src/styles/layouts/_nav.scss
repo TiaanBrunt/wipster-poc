@@ -10,16 +10,43 @@
     align-items: center;
     padding: 5px 15px;
 
+    &--sticky{
+      @media screen and (min-width: 768px) {
+        position: fixed;  
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.90);
+        .c-nav__nav-container__logo-link__image{
+          fill: #000; 
+        }
+        .c-nav__nav-container__nav-list__link{
+          color: rgba(68, 68, 68, 1);
+        }
+
+        .c-nav__nav-container__search svg path{
+          fill: rgba(68, 68, 68, 1);
+        }
+      }
+    }
     &__logo-link{
       display: block;
       &__image{
         height: 100%;
+        width: 160px;
+        height: 140px;
+        fill: #FFF;
+  
+        
       }
     }
 
     &__nav-list{
-      display: flex;
+      display: none;
       margin-left: auto;
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
 
       &__link{
         margin-left: 5px;
@@ -38,7 +65,10 @@
     }
 
     &__trial{
-      margin-left: 15px;
+      margin-left: auto;
+      @media screen and (min-width: 576px) {
+        margin-left: 15px;
+      }
       .c-generic-link{
         padding: 12px 24px;
         font-size: 16px;
@@ -51,7 +81,16 @@
 
     &__search{
       padding: 10px 5px;
-      margin-left: 15px;
+      margin-left: auto;
+      display: none;
+
+      @media screen and (min-width: 576px) {
+        display: block;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-left: 15px;
+      }
       svg{
         height: 18.5px;
         width: 18px;

@@ -3,10 +3,16 @@
     display: grid;
     grid-column: 2 / 14;
     grid-template-columns: 1fr 1fr;
-    &__card{
-      grid-column: span 4;
-      @media screen and (min-width: 768px) {
-        grid-column: span 2;
+    .card--hortizontal-logo-text{
+      grid-column: span 2;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      @media screen and (min-width: 992px) {
+        grid-column: span 1;
+        flex-direction: row;
+        align-items: center;
+        gap: unset;
       }
     }
   }

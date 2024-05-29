@@ -108,6 +108,7 @@ export default function Home() {
 
 
       <LeftRightBlockImage
+        eyebrow_image={{image_url: "https://www.wipster.io/hs-fs/hubfs/Images/Logos/Adobe.png?width=278&name=Adobe.png", image_alt: "Adobe logo"}}
         heading="Bring feedback into your Premiere Pro and After Effects timeline"
         paragraph=
         {`
@@ -119,6 +120,7 @@ Share work-in-progress video right from the timeline with the Wipster Extension 
         image_alignment="right"
         image={{ image_url: 'https://www.wipster.io/hs-fs/hubfs/adobe-panel-sample-mobile.png?width=745&height=593&name=adobe-panel-sample-mobile.png', image_alt: "image_alt" }}
         background_color="zinc"
+        bottom_image={{image_url:"https://www.wipster.io/hs-fs/hubfs/Website%20Pages/Integrations/adobe-apps@2x.png?width=208&name=adobe-apps@2x.png", image_alt:"adobe-apps"}}
       />
 
       <LeftRightBlockImage

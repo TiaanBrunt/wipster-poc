@@ -15,12 +15,14 @@ interface LinkProps {
 
 // TODO: add variations for background_color
 interface BlockProps {
-    heading:string,
+    eyebrow_image?:ImageProps,
+    heading?:string,
     paragraph:string,
     links?: LinkProps[], 
     image_alignment: "left" | "right",
-    image: ImageProps,
+    image?: ImageProps,
     background_color: "white" | "zinc" | "slate"
+    bottom_image?:ImageProps
 }
 
 
@@ -30,6 +32,11 @@ const LeftRightBlockImage = (block : BlockProps) => {
     return(
         <div className={`${c} container ${c}--image-${block.image_alignment || 'right'} ${block.background_color && `background--${block.background_color}`}`}>
             <div className={`${c}__content-container`}>
+                {block.eyebrow_image && (
+                    <div className={`${c}__content-container__eyebrow-image`}>
+                        <img className={`${c}__content-container__eyebrow-image__image`} src={block.eyebrow_image.image_url} alt={block.eyebrow_image.image_alt} />
+                    </div>
+                ) }
                 <h2 className={`${c}__content-container__heading`}>{block.heading}</h2>
                 <RichTextBlock {...{content: block.paragraph, classes: "c-left-right-block--image__content-conatiner__paragraph" }}/>
                 <div className={`${c}__content-container__links`}>
@@ -39,6 +46,11 @@ const LeftRightBlockImage = (block : BlockProps) => {
                     )
                 })}
                 </div>
+                {block.bottom_image && ( 
+                <div className={`${c}__content-container__bottom-image`}>
+                    <img src={block.bottom_image?.image_url} alt={block.bottom_image?.image_alt} className={`${c}__content-container__bottom-image__image`} />
+                </div>
+                )}
             </div>
 
             <div className={`${c}__image-container`}>
