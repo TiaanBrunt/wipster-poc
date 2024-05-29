@@ -13,14 +13,13 @@ interface LinkProps {
     variant: "green" | "blue";
 }
 
-// TODO: add variations for background_color
 interface BlockProps {
     eyebrow_image?:ImageProps,
     heading?:string,
     paragraph:string,
     links?: LinkProps[], 
     image_alignment: "left" | "right",
-    image?: ImageProps,
+    image: ImageProps,
     background_color: "white" | "zinc" | "slate"
     bottom_image?:ImageProps
 }
@@ -54,17 +53,6 @@ const LeftRightBlockImage = (block : BlockProps) => {
             </div>
 
             <div className={`${c}__image-container`}>
-
-                {/* TODO: scrape images convert to webp and then use next img */}
-                {/* <Image
-                src={block.image.image_url} 
-                alt={block.image.image_alt}
-                layout='fill'
-                objectFit='contain'
-                className={`${c}__image-container__image`}
-                >
-
-                </Image> */}
 
                 <img className={`${c}__image-container__image`} src={block.image.image_url} alt={block.image.image_alt} />
             </div>
